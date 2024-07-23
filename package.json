@@ -21,9 +21,11 @@
     "typescript": "^5.5.3"
   },
   "dependencies": {
+    "@netlify/functions": "^2.8.1",
     "@types/cors": "^2.8.17",
     "cors": "^2.8.5",
     "install": "^0.13.0",
-    "npm": "^10.8.2"
+    "npm": "^10.8.2",
+    "serverless-http": "^3.2.0"
   }
 }
