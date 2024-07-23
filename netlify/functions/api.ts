@@ -7,13 +7,12 @@ import missionRoutes from "../../src/routes/missions.routes";
 const api = express();
 
 const router = Router();
-
 router.get("/", (req, res) => res.send("APIs for Taurob project"));
 
 api.use(cors());
-api.use("/robots", robotRoutes);
-api.use("/missions", missionRoutes);
 
 api.use("/api/", router);
+api.use("/api/robots", robotRoutes);
+api.use("/api/missions", missionRoutes);
 
 export const handler = serverless(api);
