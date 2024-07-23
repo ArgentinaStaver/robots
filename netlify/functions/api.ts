@@ -11,8 +11,15 @@ router.get("/", (req, res) => res.send("APIs for Taurob project"));
 
 api.use(cors());
 
-api.use("/api/", router);
-api.use("/api/robots", robotRoutes);
-api.use("/api/missions", missionRoutes);
+api.use("/.netlify/functions/api/", router);
+api.use("/.netlify/functions/api/robots", robotRoutes);
+api.use("/.netlify/functions/api/missions", missionRoutes);
+// api.use("/api/", router);
+
+// api.use("/api/robots", robotRoutes);
+// api.use("/api/missions", missionRoutes);
 
 export const handler = serverless(api);
+
+    // "start": "ts-node src/index.ts",
+        // "build": "tsc",
